@@ -1,0 +1,29 @@
+<style>
+ 
+</style>
+<button mat-button color="accent" style="float: center;" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" ><--Go Back</button>
+<div>
+  <div class="wrapper">
+    <div class="product-img">
+      <img src={{item.image}} height="420" width="327">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{item.pName}}</h1>
+        <h2>by {{item.pSeller.s_Id}}</h2>
+        <p>{{item.pDescription  | titlecase}} </p>
+        <p>color <mat-icon style="color: '{{item.color}}';" [ngStyle]="{'background-color': item.color }">favorite</mat-icon></p>
+      </div>
+      <br>
+      <div class="product-price-btn">
+        
+        
+        <p class="price"><span>{{item.price}}₹</span></p>
+      
+        <button type="button"  (click)="proceedtocart(item)">Add to cart</button>
+      </div>
+    </div>
+  </div>
+ 
+   
+</div>
